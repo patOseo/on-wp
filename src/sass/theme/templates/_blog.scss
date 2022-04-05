@@ -1,0 +1,16 @@
+.content-loop {
+	margin-top: -4rem;
+}
+
+.blog-box {
+	a {
+		color: $primary;
+		text-decoration: none;
+	}
+
+	&:hover {
+		.btn {
+			background: $primary;
+		}
+	}
+}

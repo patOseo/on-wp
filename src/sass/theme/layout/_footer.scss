@@ -1,0 +1,40 @@
+.newsletter-section {
+	background: $medblue;
+
+	.subscription__input {
+		border: 1px inset $darkblue;
+		background: transparent;
+		color: $white;
+		letter-spacing: .5px;
+
+		&::placeholder {
+			color: $white;
+			letter-spacing: .5px;
+		}
+	}
+}
+
+.site-footer {
+	background: $darkblue;
+
+	a {
+		color: $white;
+	}
+
+	.copyright {
+		background: rgba($black, 25%);
+		font-size: .9rem;
+		color: rgba($white, 50%);
+	}
+
+	.nav-link {
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+}
+
+
+// WPML Notice
+.otgs-development-site-front-end {
+	display: none;
+}

@@ -1,0 +1,38 @@
+.navbar-toggler {
+	.fa {
+		font-size: 1.75rem;
+		color: #000;
+	}
+}
+
+.offcanvas.show {
+	.navbar-nav {
+		.nav-link {
+			font-weight: bold;
+			font-size: 1.25rem;
+			border-left: 12px solid transparent;
+			color: #9596a0;
+
+			&:hover {
+				color: $light;
+				border-color: $red;
+			}
+		}
+
+		.current-menu-item {
+			.nav-link {
+				color: $light;
+				border-color: $red;
+			}
+		}
+	}
+
+	& + .language-switcher {
+		position: fixed;
+		bottom: 2rem;
+		right: 2rem;
+		display: block !important;
+		font-size: 1.25rem;
+		z-index: 9999;
+	}
+}

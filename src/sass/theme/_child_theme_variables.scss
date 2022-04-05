@@ -1,0 +1,61 @@
+// Use this file to overwrite the basic Bootstrap variables and add your own variables
+// To overwrite a Bootstrap variable you don´t have to touch the Bootstrap folder.
+// Just copy a variable from src/sass/assets/bootstrap5/_variables.scss, paste it here and edit the value.
+
+
+$red: #d81231;
+$darkblue: #2b2d42;
+$medblue: #8d99ae;
+$bluegrey: #edf2f4;
+$light: #fff;
+$lightgrey: #e3e8eb;
+
+$primary: $darkblue; 
+$secondary: $red;
+
+$link-color: $red;
+$nav-link-color: $darkblue;
+
+$font-family-base: "Fira Sans", Helvetica, Arial, sans-serif;
+$headings-font-family: $font-family-base;
+
+$font-size-base:			  1rem;
+$h1-font-size:                $font-size-base * 2.5 !default;
+$h2-font-size:                $font-size-base * 1.75 !default;
+$h3-font-size:                $font-size-base * 1.5 !default;
+$h4-font-size:                $font-size-base * 1.25 !default;
+$h5-font-size:                $font-size-base * 1.15 !default;
+$h6-font-size:                $font-size-base !default;
+
+$display-font-weight: bold;
+
+$hr-margin-y:                 .5rem;
+$hr-color:                    inherit !default;
+$hr-height:                   1px;
+$hr-opacity:                  .25 !default;
+
+$line-height-base:            1.62 !default;
+
+
+// Offcanvas
+$offcanvas-bg-color:        $darkblue;
+$offcanvas-color: 			$light;
+
+
+// scss-docs-start container-max-widths
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 1024px
+) !default;
+
+// scss-docs-start btn-variables
+$btn-padding-y:               1rem;
+$btn-padding-x:               2rem;
+$btn-border-width:            0;
+$btn-box-shadow:              none;
+$btn-focus-box-shadow:        none;
+$btn-active-box-shadow:       none;
+
+// Allows for customizing button radius independently from global border radius
+$btn-border-radius:           0;

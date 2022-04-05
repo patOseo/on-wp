@@ -1,0 +1,45 @@
+.table-of-contents {
+	background: $bluegrey;
+	position: sticky;
+	top: 20px;
+	max-height: 92vh;
+	overflow-y: scroll;
+	font-size: .85rem;
+
+	&::-webkit-scrollbar {
+    	width: 8px;
+	}
+	
+	&::-webkit-scrollbar-track {
+	    background: $lightgrey;
+	}
+	
+	&::-webkit-scrollbar-thumb {
+	    border-radius: 10px;
+	    background: $medblue;
+	}
+
+	a.table-header {
+		border-bottom: 1px solid $bluegrey;
+		text-decoration: none;
+	}
+
+	.nav-link {
+		border-radius: 0;
+	}
+
+	.nav {
+		.nav {
+			.nav-link {
+				border-left: 2px solid $secondary; 
+			}
+		}
+	}
+}
+
+.report-section {
+	h2, h3, h4 {
+		margin-top: 2rem;
+		margin-bottom: 2rem;
+	}
+}

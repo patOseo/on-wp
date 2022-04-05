@@ -1,0 +1,18 @@
+.btn {
+	&:hover {
+		background: $red;
+	}
+
+	letter-spacing: .5px;
+}
+
+.gform_button {
+	padding: .5rem 2rem;
+	border: 0;
+	color: $light;
+	background: $darkblue;
+
+	&:hover {
+		background: $red;
+	}
+}

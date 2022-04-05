@@ -1,0 +1,43 @@
+.entry-content {
+	ul {
+		margin: 15px 0 2rem 0;
+		padding-left: 0;
+		border-top: 1px solid $lightgrey;
+
+		li {
+			position: relative;
+			padding: 11px 0 11px 25px;
+			border-bottom: 1px solid $lightgrey;
+			list-style-type: none;
+
+			p {
+				margin-bottom: 0 !important;
+			}
+		
+			&:before {
+				content: '';
+				width: 6px;
+				height: 8px;
+				background-image: url(../assets/img/arrow-red.svg);
+				position: absolute;
+				top: 50%;
+				left: 0;
+				transform: translateY(-50%);
+			}
+		}
+	}
+
+	ol {
+		margin: 15px 0 2rem 0;
+		padding-left: 0;
+		border-top: 1px solid $lightgrey;
+
+		li {
+			padding: 11px 0 11px 25px;
+			border-bottom: 1px solid $lightgrey;
+			list-style: decimal;
+		}
+	}
+}
+
+

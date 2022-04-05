@@ -1,0 +1,53 @@
+{
+    "version": 1,
+    "settings": {
+        "layout": {
+            "contentSize": "1000px",
+            "wideSize": "1400px"
+        },
+        "spacing": {
+            "margin": true,
+            "padding": true
+        },
+        "color": {
+            "palette": [
+                {
+                    "name": "Black",
+                    "slug": "black",
+                    "color": "#000000"
+                },
+                {
+                    "name": "White",
+                    "slug": "white",
+                    "color": "#ffffff"
+                },
+                {
+                    "name": "Red",
+                    "slug": "red",
+                    "color": "#d81231"
+                },
+                {
+                    "name": "Dark Blue",
+                    "slug": "darkblue",
+                    "color": "#2b2d42"
+                },
+                {
+                    "name": "Medium Blue",
+                    "slug": "medblue",
+                    "color": "#8d99ae"
+                },
+                {
+                    "name": "Blue Grey",
+                    "slug": "bluegrey",
+                    "color": "#edf2f4"
+                },
+                {
+                    "name": "Light Grey",
+                    "slug": "lightgrey",
+                    "color": "#e3e8eb"
+                }
+
+            ]
+        }
+    }
+}

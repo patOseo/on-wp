@@ -1,0 +1,14 @@
+.page-header {
+	background: $bluegrey;
+
+	.header-text p {
+		color: tint-color($black, 60%);
+	}
+
+	.header-text {
+		h2,h3,h4,h5,h6 {
+			color: tint-color($black, 40%);
+			font-weight: lighter;
+		}
+	}
+}

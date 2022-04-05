@@ -1,0 +1,27 @@
+.member-overlay {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 160px;
+	height: 160px;
+	background: rgba($darkblue, .7);
+	border-radius: 50%;
+	opacity: 0;
+	transition: 0.2s;
+}
+
+.member-image {
+	&:hover {
+		.member-overlay {
+			opacity: 1;
+		}
+	}
+}
+
+.member-link {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}

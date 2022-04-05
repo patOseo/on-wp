@@ -1,0 +1,19 @@
+.clients {
+	.client {
+		img {
+			-webkit-filter: grayscale(1);
+			opacity: .5;
+	
+			&:hover {
+				-webkit-filter: grayscale(0);
+				opacity: 1;
+			}
+		}
+	}
+}
+
+.client-grid {
+	img {
+		max-width: 160px;
+	}
+}
