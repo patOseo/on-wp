@@ -26,10 +26,18 @@ $container = get_theme_mod( 'understrap_container_type' );
 				</p>
 			</div>
 			<div class="py-3 py-lg-0 col-lg-4 text-center order-last order-lg-2">
+				<?php if(get_field('facebook', 'option')): ?>
 				<a class="d-inline px-4" href="<?php the_field('facebook', 'option'); ?>" target="_blank" rel="noreferrer,noopener"><img src="/wp-content/themes/opennorth/images/facebook.svg" alt="OpenNorth on Facebook"></a>
+				<?php endif; ?>
+				<?php if(get_field('linkedin', 'option')): ?>
 				<a class="d-inline px-4" href="<?php the_field('linkedin', 'option'); ?>" target="_blank" rel="noreferrer,noopener"><img src="/wp-content/themes/opennorth/images/linkedin.svg" alt="OpenNorth on LinkedIn"></a>
+				<?php endif; ?>
+				<?php if(get_field('twitter', 'option')): ?>
 				<a class="d-inline px-4" href="<?php the_field('twitter', 'option'); ?>" target="_blank" rel="noreferrer,noopener"><img src="/wp-content/themes/opennorth/images/twitter.svg" alt="OpenNorth on Twitter"></a>
+				<?php endif; ?>
+				<?php if(get_field('medium', 'option')): ?>
 				<a class="d-inline px-4" href="<?php the_field('medium', 'option'); ?>" target="_blank" rel="noreferrer,noopener"><img src="/wp-content/themes/opennorth/images/medium.svg" alt="OpenNorth on Medium" width="28"></a>
+				<?php endif; ?>
 			</div>
 			<div class="py-3 py-lg-0 col-lg-4 order-2 order-lg-last">
 				<form class="subscription" action="https://opennorth.us2.list-manage.com/subscribe/post?u=a602fac79ef3dc584bf1a2743&amp;id=1e0c02fa29" method="post" target="_blank" novalidate="" _lpchecked="1">
