@@ -90,6 +90,8 @@ add_action( 'customize_controls_enqueue_scripts', 'understrap_child_customize_co
 
 add_theme_support( 'align-wide' );
 
+define('DISALLOW_FILE_EDIT',true);
+
 
 require_once('functions/acf.php');
 require_once('functions/lang.php');
