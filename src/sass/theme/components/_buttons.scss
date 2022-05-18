@@ -4,6 +4,15 @@
 	}
 
 	letter-spacing: .5px;
+
+	&.active {
+		background-color: $secondary;
+	
+		&:focus {
+			outline: 0;
+			box-shadow: none;
+		}
+	}
 }
 
 .gform_button {

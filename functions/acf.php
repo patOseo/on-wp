@@ -113,5 +113,16 @@ function my_acf_init_block_types() {
             'mode'              => 'edit',
             'keywords'          => array( 'jobs', 'careers' ),
         ));
+
+        acf_register_block_type(array(
+            'name'              => 'courses',
+            'title'             => __('Courses'),
+            'description'       => __('A custom block to display courses blocks.'),
+            'render_template'   => 'block-templates/block-courses.php',
+            'category'          => 'opennorth',
+            'icon'              => 'awards',
+            'mode'              => 'edit',
+            'keywords'          => array( 'courses' ),
+        ));
     }
 }
