@@ -14,6 +14,10 @@
 				<?php if(!is_singular('jobs')): ?>
 				<p class="fs-4"><?php if(is_singular('reports')) { the_date('M Y'); } else { the_date('d M Y'); } ?> <?php if(have_rows('authors')): ?><strong><i><?php if(lang_en()) { echo "by"; } elseif(lang_fr()) { echo "par"; } ?> <?php while(have_rows('authors')): the_row(); $authors[] = get_sub_field('author_name'); endwhile; echo implode(', ', $authors); ?></i></strong><?php endif; ?></p>
 				<?php endif; ?>
+
+				<?php if(is_singular('reports') && get_field('pdf_file')): ?>
+					<a href="<?php the_field('pdf_file'); ?>" class="btn btn-md btn-secondary" target="_blank">View PDF Version</a>
+				<?php endif; ?>
 			</div>
 		</div>
 	</div>	
