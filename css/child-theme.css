@@ -14911,6 +14911,7 @@ h4, .h4 {
   font-weight: 300;
 }
 .entry-content blockquote .blockquote-footer, .entry-content blockquote .wp-block-quote cite, .wp-block-quote .entry-content blockquote cite {
+  margin-top: 1rem;
   text-align: center;
 }
 
