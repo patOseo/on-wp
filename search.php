@@ -14,11 +14,30 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 ?>
 
+<div class="page-header py-5">
+	<div class="container">
+		<div class="row align-items-center">
+			<div class="col-12 px-5 text-center">
+				<h1 class="my-5">
+					<?php
+					printf(
+						/* translators: %s: query term */
+						esc_html__( 'Search Results for: %s', 'understrap' ),
+						'<span>' . get_search_query() . '</span>'
+					);
+					?>
+				</h1>
+				<?php get_search_form(); ?>
+			</div>
+		</div>
+	</div>	
+</div>
+
 <div class="wrapper" id="search-wrapper">
 
 	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
 
-		<div class="row">
+		<div class="row py-5">
 
 			<!-- Do the left sidebar check and opens the primary div -->
 			<?php get_template_part( 'global-templates/left-sidebar-check' ); ?>
@@ -26,20 +45,6 @@ $container = get_theme_mod( 'understrap_container_type' );
 			<main class="site-main" id="main">
 
 				<?php if ( have_posts() ) : ?>
-
-					<header>
-
-							<h1 class="page-title my-5">
-								<?php
-								printf(
-									/* translators: %s: query term */
-									esc_html__( 'Search Results for: %s', 'understrap' ),
-									'<span>' . get_search_query() . '</span>'
-								);
-								?>
-							</h1>
-
-					</header><!-- .page-header -->
 
 					<?php /* Start the Loop */ ?>
 					<?php
@@ -65,9 +70,6 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 			<!-- The pagination component -->
 			<?php understrap_pagination(); ?>
-
-			<!-- Do the right sidebar check -->
-			<?php get_template_part( 'global-templates/right-sidebar-check' ); ?>
 
 		</div><!-- .row -->
 

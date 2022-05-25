@@ -40,6 +40,10 @@ jQuery(function($){
     	]
 	});
 
+  $(".search-button").click(function(){
+    $('#searchbox').toggle();
+  });
+
 });
 
 

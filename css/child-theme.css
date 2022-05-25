@@ -15136,6 +15136,20 @@ h4, .h4 {
   background: #e3e8eb;
 }
 
+.search-button {
+  cursor: pointer;
+}
+
+#searchbox {
+  display: none;
+  right: 0;
+  top: 60px;
+}
+
+.wp-block-latest-posts__list li {
+  margin-bottom: 1rem;
+}
+
 /* Slider */
 .slick-slider {
   position: relative;

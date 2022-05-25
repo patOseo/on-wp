@@ -12011,6 +12011,9 @@
 	      }
 	    }]
 	  });
+	  $(".search-button").click(function () {
+	    $('#searchbox').toggle();
+	  });
 	}); // Steps
 
 	document.addEventListener("DOMContentLoaded", () => {

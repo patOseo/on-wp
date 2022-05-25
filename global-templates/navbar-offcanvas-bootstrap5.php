@@ -18,7 +18,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 	</h2>
 
 
-	<div class="<?php echo esc_attr( $container ); ?>">
+	<div class="<?php echo esc_attr( $container ); ?> position-relative">
 
 		<a href="/<?php if(lang_fr()) { echo "fr/"; } ?>" rel="home"><img src="/wp-content/themes/opennorth/images/logo-small.svg" alt="OpenNorth"></a>
 
@@ -37,7 +37,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 			wp_nav_menu(
 				array(
 					'theme_location'  => 'primary',
-					'container_class' => 'offcanvas-body',
+					'container_class' => '',
 					'container_id'    => '',
 					'menu_class'      => 'navbar-nav justify-content-center flex-grow-1 pe-3',
 					'fallback_cb'     => '',
@@ -47,11 +47,16 @@ $container = get_theme_mod( 'understrap_container_type' );
 				)
 			);
 			?>
+			<div class="mx-4 mt-4 d-lg-none"><?php get_search_form(); ?></div>
 		</div><!-- .offcanvas -->
 
 		<div class="language-switcher text-secondary h6 mb-0 fw-normal d-none d-lg-block">
 			<?php echo do_shortcode('[wpml_language_switcher]'); ?>
 		</div>
-	</div><!-- .container(-fluid) -->
+		<div class="search-button d-none d-lg-block ms-3">
+			<i class="fa fa-search text-primary"></i>
+		</div>
 
+		<div id="searchbox" class="position-absolute"><?php get_search_form(); ?></div>
+	</div><!-- .container(-fluid) -->
 </nav><!-- .site-navigation -->
