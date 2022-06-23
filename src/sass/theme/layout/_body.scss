@@ -1,10 +1,10 @@
 body {
 	position: relative;
-	letter-spacing: .5px;
+	letter-spacing: 0;
 }
 
 ::selection {
-  background: $red; /* WebKit/Blink Browsers */
+  background: #cdd8e9; /* WebKit/Blink Browsers */
   color: $black;
 }
 ::-moz-selection {
