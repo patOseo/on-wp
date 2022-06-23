@@ -124,5 +124,16 @@ function my_acf_init_block_types() {
             'mode'              => 'edit',
             'keywords'          => array( 'courses' ),
         ));
+
+        acf_register_block_type(array(
+            'name'              => 'publications',
+            'title'             => __('Publications'),
+            'description'       => __('A custom block to display publications.'),
+            'render_template'   => 'block-templates/block-publications.php',
+            'category'          => 'opennorth',
+            'icon'              => 'media-text',
+            'mode'              => 'edit',
+            'keywords'          => array( 'publications' ),
+        ));
     }
 }
