@@ -98,7 +98,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 					<div class="site-info fw-light">
 
-						<small>Copyright Open North <?php echo date('Y'); ?></small>
+						<small>Copyright Open North <?php echo date('Y'); ?> | <a class="text-decoration-none" href="<?php echo get_permalink(get_page_by_path('sitemap')->ID); ?>"><?php if(lang_en()): ?>Sitemap<?php elseif(lang_fr()): ?>Plan de site<?php endif; ?></a></small>
 
 					</div><!-- .site-info -->
 
