@@ -3,7 +3,8 @@
 	.navbar-nav {
 		.nav-link {
 			position: relative;
-			padding: 18px 32px 16px;
+			padding: 18px 14px 16px;
+			font-size: .95rem;
 			font-weight: 400;
 			color: $darkblue;
 		
@@ -31,6 +32,11 @@
     					transform: scaleX(1);
 					}
 				}	
+			}
+
+			@include media-breakpoint-up(xl) {
+				padding: 18px 28px 16px;
+				font-size: 1rem;
 			}
 		}
 

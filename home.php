@@ -18,6 +18,10 @@ get_header();
 
 $container = get_theme_mod( 'understrap_container_type' );
 if(lang_en()) { $pid = 25; } elseif(lang_fr()) { $pid = 137; }
+
+global $wp;
+$base = home_url( $wp->request );
+
 ?>
 
 <div class="page-header py-5">
@@ -34,13 +38,13 @@ if(lang_en()) { $pid = 25; } elseif(lang_fr()) { $pid = 137; }
 
 		<?php /* ?>
 		<div class="blog-filters-block p-4">
-			<form action="">
+			<form action="https://opennorth.ihearttraffic.ca/wp-admin/admin-ajax.php" method="POST" id="blogfilter">
 				<div class="row">
 					<div class="col-6">
 						<div class="form-group">
 							<label for="blogtype">Show:</label>
-							<select class="form-select" name="blog_type" id="blogtype">
-								<option value="all" selected>All</option>
+							<select class="form-select filterfield" name="blog_type" id="blogtype">
+								<option value="" selected>All</option>
 								<option value="blog">Blogs</option>
 								<option value="announcement">Announcements</option>
 								<option value="news">News</option>
@@ -51,7 +55,7 @@ if(lang_en()) { $pid = 25; } elseif(lang_fr()) { $pid = 137; }
 					<div class="col-6">
 						<div class="form-group">
 							<label for="blogcategory">In Category:</label>
-							<select class="form-select" name="blog_category" id="blogcategory">
+							<select class="form-select filterfield" name="blog_category" id="blogcategory">
 								<option value="" selected>All</option>
 								<?php $blogcats = get_categories(); ?>
 								<?php foreach($blogcats as $blogcat): ?>
@@ -61,9 +65,12 @@ if(lang_en()) { $pid = 25; } elseif(lang_fr()) { $pid = 137; }
 						</div>
 					</div>
 				</div>
+				<input type="hidden" name="action" value="opennorth_filter">
+				<input type="hidden" name="base" value="<?php echo $base; ?>"/>
 			</form>
 		</div>
 		<?php */ ?>
+
 	</div>	
 </div>
 
@@ -73,7 +80,7 @@ if(lang_en()) { $pid = 25; } elseif(lang_fr()) { $pid = 137; }
 	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
 
 		<div class="content-loop mb-5">
-			<div class="row">
+			<div class="row" id="response">
 	
 					<?php
 					if ( have_posts() ) {

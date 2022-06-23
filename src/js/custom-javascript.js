@@ -81,3 +81,23 @@ function changeTabsHistory(tab){
         document.getElementById('tab-'+newPosition).classList.remove('hidden');
     }
 }
+
+
+
+// Blog Filter
+jQuery(function($){
+  $('.filterfield').change(function(){
+    var filter = $('#blogfilter');
+    $.ajax({
+      url:filter.attr('action'),
+      data: {
+        action: 'opennorth_filter'
+      }, // form data
+      type:filter.attr('method'), // POST
+      success:function(data){
+        $('#response').html(data); // insert data
+      }
+    });
+    return false;
+  });
+});

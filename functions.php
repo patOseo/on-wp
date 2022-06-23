@@ -98,4 +98,5 @@ require_once('functions/lang.php');
 require_once('functions/image-sizes.php');
 require_once('functions/permissions.php');
 require_once('functions/admin-columns.php');
+require_once('functions/blog-filters.php');
 // require_once('functions/gutenberg.php');
