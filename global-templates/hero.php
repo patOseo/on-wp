@@ -17,8 +17,17 @@
 
 				<?php if(is_singular('reports') && get_field('pdf_file')): ?>
 					<a href="<?php the_field('pdf_file'); ?>" class="btn btn-md btn-secondary" target="_blank">View PDF Version</a>
-				<?php endif; ?>
+				<?php endif; ?> 
 			</div>
 		</div>
 	</div>	
+</div>
+<div class="breadcrumbs-container">
+	<div class="container pt-3">
+		<?php
+			if ( function_exists('yoast_breadcrumb') ) {
+			  yoast_breadcrumb( '<p id="breadcrumbs" class="mb-0"><small>','</small></p>' );
+			}
+		?>
+	</div>
 </div>
