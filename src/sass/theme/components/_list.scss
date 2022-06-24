@@ -1,14 +1,28 @@
 .entry-content {
-	ul {
+	> ul {
 		margin: 15px 0 2rem 0;
-		padding-left: 0;
 		border-top: 1px solid $lightgrey;
+
+		> li {
+			border-bottom: 1px solid $lightgrey;
+		}
+	}
+
+	ul {
+		padding-left: 0;
+
+		ul {
+			padding-top: 6px;
+		}
 
 		li {
 			position: relative;
 			padding: 11px 0 11px 25px;
-			border-bottom: 1px solid $lightgrey;
 			list-style-type: none;
+
+			h2,h3,h4,h5,h6 {
+				margin: 0 !important;
+			}
 
 			p {
 				margin-bottom: 0 !important;
@@ -20,7 +34,7 @@
 				height: 8px;
 				background-image: url(../assets/img/arrow-red.svg);
 				position: absolute;
-				top: 50%;
+				top: 25px;
 				left: 0;
 				transform: translateY(-50%);
 			}
