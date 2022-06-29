@@ -12013,6 +12013,7 @@
 	  });
 	  $(".search-button").click(function () {
 	    $('#searchbox').toggle();
+	    $('#s-2').focus();
 	  });
 	}); // Steps
 
