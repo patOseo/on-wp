@@ -66,7 +66,7 @@ $query = new WP_Query($args);
 		</div>
 
 		
-		<div class="blog-filters-block p-4" id="blogfilter">
+		<div class="blog-filters-block p-4">
 			<form action="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>/#blogfilter" method="GET" id="blogfilter">
 				<div class="row">
 					<div class="col-6">
@@ -94,8 +94,6 @@ $query = new WP_Query($args);
 						</div>
 					</div>
 				</div>
-				<!-- <input type="hidden" name="action" value="opennorth_filter">
-				<input type="hidden" name="base" value="<?php echo $base; ?>"/> -->
 			</form>
 		</div>
 		
