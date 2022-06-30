@@ -14,7 +14,7 @@ defined( 'ABSPATH' ) || exit;
 		<div class="overflow-hidden blog-img-container">
 			<?php echo wp_get_attachment_image(get_post_thumbnail_id(), 'blog', '', array('class' => 'w-100 h-auto')); ?>
 		</div>
-		<div class="shadowbox">
+		<div class="shadowbox h-100">
 			<div class="blog-meta">
 				<div class="mb-2"><small><?php the_date('M d, Y'); ?></small></div>
 				<?php if(get_field('blog_type')): ?><span class="text-secondary fw-bold"><?php echo ucfirst(get_field('blog_type')); ?></span><?php endif; ?>
