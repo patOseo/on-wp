@@ -14,3 +14,11 @@
 		}
 	}
 }
+
+.blog-img-container {
+	max-height: 320px;
+
+	@include media-breakpoint-between(md, lg) {
+		max-height: 220px;
+	}
+}

@@ -14709,6 +14709,15 @@ h4, .h4 {
   background: #2b2d42;
 }
 
+.blog-img-container {
+  max-height: 320px;
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .blog-img-container {
+    max-height: 220px;
+  }
+}
+
 .single-post .entry-content p {
   margin-bottom: 2rem;
 }
