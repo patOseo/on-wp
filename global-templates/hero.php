@@ -16,7 +16,7 @@
 				<?php endif; ?>
 
 				<?php if(is_singular('reports') && get_field('pdf_file')): ?>
-					<a href="<?php the_field('pdf_file'); ?>" class="btn btn-md btn-secondary" target="_blank"><?php if(lang_en()): ?>View PDF Version<?php else(lang_fr()): ?>Ouvrir la version PDF<?php endif; ?></a>
+					<a href="<?php the_field('pdf_file'); ?>" class="btn btn-md btn-secondary" target="_blank"><?php if(lang_en()): ?>View PDF Version<?php elseif(lang_fr()): ?>Ouvrir la version PDF<?php endif; ?></a>
 				<?php endif; ?> 
 			</div>
 		</div>
