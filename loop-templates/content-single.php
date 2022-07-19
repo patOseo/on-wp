@@ -27,3 +27,66 @@ defined( 'ABSPATH' ) || exit;
 	</div><!-- .entry-content -->
 
 </article><!-- #post-## -->
+
+<?php // if(is_singular('post')):
+
+//	// Schema
+//	global $schema;
+//	global $fullschema;
+//	
+//	$schema = array();
+//	$fullschema = array();
+//	$i = 1;
+//	
+//	if(have_rows('authors')):
+//		while(have_rows('authors')): the_row(); 
+//			$authors[] = get_sub_field('author_name'); 
+//		endwhile; 
+//		$allauthors = implode(', ', $authors);
+//	endif;
+//
+//	if(isset($allauthors) && $allauthors) {
+//		$the_author = $allauthors;
+//	} else {
+//		$the_author = 'Open North';
+//	}
+//
+//	if(get_the_post_thumbnail()) {
+//		$image = get_the_post_thumbnail_url();
+//	} else {
+//		$image = 'https://opennorth.ca/assets/img/logo.svg';
+//	}
+//	
+//	$fullschema[] = array(
+//		'@context'    => 'https://schema.org',
+//		'@type'       => 'Article',
+//		'mainEntityOfPage' => array(
+//			'@type' => 'WebPage',
+//			'@id' => get_permalink()
+//		),
+//		'headline' => get_the_title(),
+//		'description' => YoastSEO()->meta->for_current_page()->description,
+//		'image' => $image,
+//		'author' => array(
+//			'@type' => 'Person',
+//			'name' => $the_author
+//		),
+//		'publisher' => array(
+//			'@type' => 'Organization',
+//			"name" => 'OpenNorth',
+//			'logo' => array(
+//			'@type' => 'ImageObject',
+//			'url' => 'https://opennorth.ca/assets/img/logo.svg'
+//			)
+//		),
+//		'datePublished' => get_the_date('Y-m-d')
+//	);
+//	
+//	function generate_blog_schema ($fullschema) {
+//	    global $fullschema;
+//	    echo '<script type="application/ld+json">'. json_encode($fullschema) .'</script>';
+//	}
+//	
+//	add_action( 'wp_footer', 'generate_blog_schema', 100 );
+
+// endif;
