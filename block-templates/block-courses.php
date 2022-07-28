@@ -99,6 +99,7 @@ for (var i = 0; i < btns.length; i++) {
 <?php endif;
 
 
+if(!is_admin()):
 // Schema
 global $schema;
 global $fullschema;
@@ -142,6 +143,5 @@ if(have_rows('courses')):
     
     add_action( 'wp_footer', 'generate_course_schema', 100 );
 
-endif;
-
-
+endif; // end if have_rows
+endif; // end if(!is_admin)
