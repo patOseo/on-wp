@@ -99,7 +99,7 @@ for (var i = 0; i < btns.length; i++) {
 <?php endif;
 
 
-if(!is_admin()):
+
 // Schema
 global $schema;
 global $fullschema;
@@ -108,40 +108,46 @@ $schema = array();
 $fullschema = array();
 $i = 1;
 
-// Check if there are courses
-if(have_rows('courses')):
-    while(have_rows('courses')): the_row();
-        $courses = array(
-            '@type'     => 'ListItem',
-            'position'  => $i,
-            'item'      => array(
-              '@type'   => 'Course',
-              'url'     => get_sub_field('course_link'),
-              'name'    => get_sub_field('course_name'),
-              'description' => get_sub_field('course_desc'),
-              'provider' => array(
-                '@type' => 'Organization',
-                'name'  => 'Open North',
-                'sameAs' => 'https://opennorth.ca/'
+
+if ( defined( 'REST_REQUEST' ) && REST_REQUEST ) {
+    // No schema if in the backend editor.
+} else {
+
+  // Check if there are courses
+  if(have_rows('courses')):
+      while(have_rows('courses')): the_row();
+          $courses = array(
+              '@type'     => 'ListItem',
+              'position'  => $i,
+              'item'      => array(
+                '@type'   => 'Course',
+                'url'     => get_sub_field('course_link'),
+                'name'    => get_sub_field('course_name'),
+                'description' => get_sub_field('course_desc'),
+                'provider' => array(
+                  '@type' => 'Organization',
+                  'name'  => 'Open North',
+                  'sameAs' => 'https://opennorth.ca/'
+                ),
               ),
-            ),
-        );
+          );
+  
+          array_push($schema, $courses);
+      $i++; endwhile;
+  
+      $fullschema[] = array(
+        '@context'    => 'https://schema.org',
+        '@type'       => 'ItemList',
+        'itemListElement' => $schema
+      );
+  
+      function generate_course_schema ($fullschema) {
+          global $fullschema;
+          echo '<script type="application/ld+json">'. json_encode($fullschema) .'</script>';
+      }
+      
+      add_action( 'wp_footer', 'generate_course_schema', 100 );
+  
+  endif; // end if have_rows
 
-        array_push($schema, $courses);
-    $i++; endwhile;
-
-    $fullschema[] = array(
-      '@context'    => 'https://schema.org',
-      '@type'       => 'ItemList',
-      'itemListElement' => $schema
-    );
-
-    function generate_course_schema ($fullschema) {
-        global $fullschema;
-        echo '<script type="application/ld+json">'. json_encode($fullschema) .'</script>';
-    }
-    
-    add_action( 'wp_footer', 'generate_course_schema', 100 );
-
-endif; // end if have_rows
-endif; // end if(!is_admin)
+};
