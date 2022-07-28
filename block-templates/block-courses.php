@@ -134,11 +134,14 @@ if(have_rows('courses')):
       '@type'       => 'ItemList',
       'itemListElement' => $schema
     );
+
+    function generate_course_schema ($fullschema) {
+        global $fullschema;
+        echo '<script type="application/ld+json">'. json_encode($fullschema) .'</script>';
+    }
+    
+    add_action( 'wp_footer', 'generate_course_schema', 100 );
+
 endif;
 
-function generate_course_schema ($fullschema) {
-    global $fullschema;
-    echo '<script type="application/ld+json">'. json_encode($fullschema) .'</script>';
-}
 
-add_action( 'wp_footer', 'generate_course_schema', 100 );
